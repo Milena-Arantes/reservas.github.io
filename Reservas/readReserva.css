@@ -33,9 +33,11 @@ h1{ /*titulo*/
   }
 
 .navegacao{
+    position: absolute;
     top: 260px;
     right: 260px;
-    display:block;
+    display:flex;
+    gap: 10px; 
 }
   
   .btnNavegacao {
