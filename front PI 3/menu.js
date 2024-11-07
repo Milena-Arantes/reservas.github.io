@@ -25,5 +25,5 @@ btnSecretaria.addEventListener('click', function(){
 //botao sair
 const btnSair = document.getElementById('btnSair');
 btnSair.addEventListener('click', function(){
-    window.location.href="./autenticacao/login.html";
+    window.location.href="./autenticacao/index.html";
 });
