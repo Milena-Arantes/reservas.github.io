@@ -33,26 +33,31 @@ h1{ /*titulo*/
   }
   
   .btnNavegacao {
+    background-color: var(--orange);
+    color: white;
+    border: 1px;
+    border-color: black;
+    border-radius: 100%;
     margin-bottom: 10px;
   }
   
   button {
-    background-color: var(--orange);
-    color: white;
-    border: none;
+    
     padding: 10px 20px;
     cursor: pointer;
   }
+
+  
   
   button:focus {
     outline: none;
   }
   
-  .table {
+  .tabela {
     display: none;
   }
   
-  .table.active {
+  .tabelaAtiva {
     display: block;
   }
   

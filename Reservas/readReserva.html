@@ -7,10 +7,13 @@
         <link rel="stylesheet" href="readReserva.css">
     </head>
     <body>
+        <h1>Grade de Horários</h1>
         <div class="container">
-            <div class="btnNavegacao">
-                <button id="anterior" onclick="changeTable(-1)">&#60;Labs &#62;</button>
-                <button id="proximo" onclick="changeTable(1)">&#60;Salas &#62;</button>
+            <div class="navegacao">
+                <button class="btnNavegacao" id="anterior" onclick="changeTable(-1)">&#60</button>
+                <p class="labTextoAtivo" id="labTextoAtivo">Labs</p>
+                <p class="salaTexto" id="salaTexto">Salas</p>
+                <button class="btnNavegacao"id="proximo" onclick="changeTable(1)">&#62</button>
             </div>
 
             <!-- TABELA DE LABORATÓRIOS -->
