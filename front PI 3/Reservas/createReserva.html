@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastrar Reserva</title>
+        <link rel="stylesheet" href="createReserva.css">
+    </head>
+    <body>
+        <h1>Reservar</h1>
+
+        <form id="formCadReserva">
+
+            <!-- VERIFICACAO DE MANUTENCAO -->
+        <div class="container">
+            <div class="campos">
+            <label class="label" for="manutencao">É manutenção?</label>
+            <br>
+            <label class="checkbox">Sim
+                <input type="radio" id="radioSim" name="manutencao" required>
+            </label>
+            <label class="checkbox">Não
+                <input type="radio" id="radioNao" name="manutencao">
+            </label>
+
+            <!-- SIM -->
+            <div class="simManutencao" id="simManutencao">
+                <br>
+                <label class="label" for="horario">Horário</label>
+                <select id="horario" name="horario" required>
+                    <option value="">Selecione um horário</option>
+                <!--OPÇÕES SERAO PREENCHIDAS DINAMICAMENTE (A PARTIR DA API)-->
+                </select>
+                <br>
+                <br>
+                <label class="label" for="local">Local:</label>
+                <br>
+                <label class="local"> Sala
+                    <input type="radio" id="radioSalaMan" name="local" required>
+                </label>
+                <label class="local">Laboratório
+                    <input type="radio" id="radioLabMan" name="local">
+                </label>
+                <br>
+
+
+            <!--SALA-->
+                <div class = "salaMan" id="salaMan">
+                    <label class="label" for="salaMan">Sala</label>
+                    <select id="salaMan" name="salaMan" required>
+                        <option value="">Selecione uma sala</option>
+                    </select>
+                </div>
+
+            <!--Lab-->
+                <div class="labMan" id="labMan">
+                    <label class="label" for="labMan">Laboratório</label>
+                    <select id="labMan" name="labMan" required>
+                        <option value="">Selecione um laboratório</option>
+                    </select>
+                </div>
+
+            <!-- FALTA BOTAO DE ENVIARRRRRR FORMULÁRIO 'SUBMIT'-->
+                <input type="submit" name="enviar" value="Salvar" class="btnSalvar">
+
+            </div>
+
+            <!-- NAOOOOOOOOOO-->
+            <div class="naoManutencao" id="naoManutencao">
+                <label class="label" for="turma">Turma</label>
+                <select id="turma" name="turma" required>
+                    <option value="">Selecione uma turma</option>
+                </select>
+
+                <label class="label" for="horario">Horário</label>
+                <select id="horario" name="horario" required>
+                    <option value="">Selecione um horário</option>
+                <!--OPÇÕES SERAO PREENCHIDAS DINAMICAMENTE (A PARTIR DA API)-->
+                </select>
+
+                <label class="label" for="local">Local</label>
+
+                <label class="local">Sala
+                    <input type="radio" id="radioSala" name="local" required>
+                </label>
+                <label class="local">Laboratório
+                    <input type="radio" id="radioLab" name="local">
+                </label>
+
+
+            <!--SALA-->
+                <div class = "sala" id="sala">
+                    <label class="label" for="sala">Sala</label>
+                    <select id="sala" name="sala" required>
+                        <option value="">Selecione uma sala</option>
+                    </select>
+ 
+                </div>
+            <!--Lab-->
+                <div class = "lab" id="lab">
+                    <label class="label" for="lab">Laboratório</label>
+                    <select id="lab" name="lab" required>
+                        <option value="">Selecione um laboratório</option>
+                    </select>
+            <!-- FALTA BOTAO DE ENVIARRRRRR FORMULÁRIO 'SUBMIT'-->
+                </div>
+
+            <input type="submit" name="enviar" value="Salvar" class="btnSalvar">
+            </div>
+            </div>
+        </div>
+
+        </form>
+
+        <button class="voltar" id="btnVoltar">Voltar</button>
+
+    </body>
+    <script src="createReserva.js"></script>
+</html>
