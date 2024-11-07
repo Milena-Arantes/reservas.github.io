@@ -28,7 +28,7 @@ btnEntrar.addEventListener('click', function() {
 
     // Validando os dados
     if (usuario === usuarioPadrao && senha === senhaPadrao) {
-        window.location.href = "../menu.html"; // Redireciona para a página seguinte
+        window.location.href = "menu.html"; // Redireciona para a página seguinte
     } else {
         alert("Usuário ou senha incorretos!");
     }
