@@ -19,11 +19,11 @@ btnSalas.addEventListener('click', function(){
 //botao Secretaria
 const btnSecretaria = document.getElementById('btnSecretaria');
 btnSecretaria.addEventListener('click', function(){
-    window.location.href="./secretaria.html"
+    window.location.href=".secretaria.html"
 });
 
 //botao sair
 const btnSair = document.getElementById('btnSair');
 btnSair.addEventListener('click', function(){
-    window.location.href="./autenticacao/index.html";
+    window.location.href=".index.html";
 });
