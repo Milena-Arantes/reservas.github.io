@@ -10,13 +10,12 @@ btnEntrar.addEventListener('click', function(){
     const senha = document.getElementById("senha").value;
     if(usuario == usuarioPadrao && senha == senhaPadrao){
         window.location.href = "..//menu.html";
-    }});*/
+    }});
 
 const btnEsqueciSenha = document.getElementById('btnEsqueciSenha');
 btnEsqueciSenha.addEventListener('click', function(){
-    window.location.href="resetarSenha.html";
-});
-
+    window.location.href="./resetarSenha.html";
+});*/
 const usuarioPadrao = "admin1";
 const senhaPadrao = "senha1234";
 
@@ -29,7 +28,7 @@ btnEntrar.addEventListener('click', function() {
 
     // Validando os dados
     if (usuario === usuarioPadrao && senha === senhaPadrao) {
-        window.location.href = "menu.html"; // Redireciona para a página seguinte
+        window.location.href = "../menu.html"; // Redireciona para a página seguinte
     } else {
         alert("Usuário ou senha incorretos!");
     }

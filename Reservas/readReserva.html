@@ -3,17 +3,22 @@
     <head>
         <meta charset="UTF=8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grade Horária</title>
+        <title>Grade Horaria</title>
         <link rel="stylesheet" href="readReserva.css">
     </head>
     <body>
-        <h1>Grade de Horários</h1>
+        <h1>Grade de Horarios</h1>
         <div class="container">
-            <div class="navegacao">
-                <button class="btnNavegacao" id="anterior" onclick="changeTable(-1)">&#60</button>
+            <div class="navegacaoSala">
+                <button class="btnNavegacaoSala" id="btnAnterior">&#60</button>
                 <p class="labTextoAtivo" id="labTextoAtivo">Labs</p>
                 <p class="salaTexto" id="salaTexto">Salas</p>
-                <button class="btnNavegacao"id="proximo" onclick="changeTable(1)">&#62</button>
+                <button class="btnNavegacaoSala"id="btnProximo"">&#62</button>
+            </div>
+            <div class="navegacaoDia">
+                <button class="btnNavegacaoDia" id="btnDiaPrev"">&#60</button>
+                <p class="dataTextoAtivo" id="dataTextoAtivo"></p> <!-- O parágrafo começa vazio pq será inserido dinamicamente através do arquivo js -->
+                <button class="btnNavegacaoDia" id="btnDiaNext">&#62</button>
             </div>
 
             <!-- TABELA DE LABORATÓRIOS -->
@@ -29,16 +34,172 @@
                             <td>Lab 6</td>
                             <td>Lab 7</td>
                             <td>Lab 8</td> <!-- O NOVE NÃO TEM RESERVAS-->
-                            <td>Global Room</td>
+                            <td>Global<br>Room</td>
                             <td>Lab 11</td>
                             <td>Lab 12</td>
                             <td>Lab 13</td>
                             <td>Auditório</td>
                             <td>Mini 1</td>
-                            <td>Sala Maker</td>
+                            <td>Sala<br>Maker</td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tableBody">
+                        <!-- Linhas com faixas de horário fixas -->
+                        <tr data-horario-inicio="7:40" data-horario-fim="9:20">
+                          <td>7h40 às 9h20</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <tr data-horario-inicio="9:30" data-horario-fim="11:10">
+                          <td>9h30 às 11h10</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>11h20 às 13h00</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>13h00 às 14h30</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>14h30 às 16h10</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>16h20 às 18h00</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>18h00 às 19h00</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>19h00 às 20h40</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
+                        <td>20h50 às 22h30</td>
+                          <td></td> <!-- Lab 1 -->
+                          <td></td> <!-- Lab 3 -->
+                          <td></td> <!-- Lab 4 -->
+                          <td></td> <!-- Lab 5 -->
+                          <td></td> <!-- Lab 6 -->
+                          <td></td> <!-- Lab 7 -->
+                          <td></td> <!-- Lab 8 -->
+                          <td></td> <!-- Global -->
+                          <td></td> <!-- Lab 11 -->
+                          <td></td> <!-- Lab 12 -->
+                          <td></td> <!-- Lab 13 -->
+                          <td></td> <!-- Auditorio -->
+                          <td></td> <!-- mini 1 -->
+                          <td></td> <!-- sala maker -->
+
+                        </tr>
                     <!-- VAI SER INSERIDO ATRAVÉS DO ARQUIVO JS -->
                     </tbody>
                 </table>

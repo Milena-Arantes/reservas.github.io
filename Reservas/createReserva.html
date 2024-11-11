@@ -29,7 +29,15 @@
                 <label class="label" for="horario">Horário</label>
                 <select id="horario" name="horario" required>
                     <option value="">Selecione um horário</option>
-                <!--OPÇÕES SERAO PREENCHIDAS DINAMICAMENTE (A PARTIR DA API)-->
+                    <option value="1-2manha">7h40 às 9h20</option>
+                    <option value="3-4manha">9h30 às 11h10</option>    
+                    <option value="5-6manha">11h20 às 13h00</option>
+                    <option value="entreManhaTarde">13h00 às 14h30</option>
+                    <option value="1-2tarde">14h30 às 16h10</option>
+                    <option value="3-4tarde">16h20 às 18h00</option>
+                    <option value="entreTardeNoite">18h00 às 19h00</option>
+                    <option value="1-2noite">19h00 às 20h40</option>
+                    <option value="3-4noite">20h50 às 22h30</option>
                 </select>
                 <br>
                 <br>
@@ -47,7 +55,7 @@
             <!--SALA-->
                 <div class = "salaMan" id="salaMan">
                     <label class="label" for="salaMan">Sala</label>
-                    <select id="salaMan" name="salaMan" required>
+                    <select id="salaOp" name="salaMan" required>
                         <option value="">Selecione uma sala</option>
                     </select>
                 </div>
@@ -75,7 +83,15 @@
                 <label class="label" for="horario">Horário</label>
                 <select id="horario" name="horario" required>
                     <option value="">Selecione um horário</option>
-                <!--OPÇÕES SERAO PREENCHIDAS DINAMICAMENTE (A PARTIR DA API)-->
+                    <option value="1-2manha">7h40 às 9h20</option>
+                    <option value="3-4manha">9h30 às 11h10</option>    
+                    <option value="5-6manha">11h20 às 13h00</option>
+                    <option value="entreManhaTarde">13h00 às 14h30</option>
+                    <option value="1-2tarde">14h30 às 16h10</option>
+                    <option value="3-4tarde">16h20 às 18h00</option>
+                    <option value="entreTardeNoite">18h00 às 19h00</option>
+                    <option value="1-2noite">19h00 às 20h40</option>
+                    <option value="3-4noite">20h50 às 22h30</option>
                 </select>
 
                 <label class="label" for="local">Local</label>
@@ -91,7 +107,7 @@
             <!--SALA-->
                 <div class = "sala" id="sala">
                     <label class="label" for="sala">Sala</label>
-                    <select id="sala" name="sala" required>
+                    <select id="salaOp" name="sala" required>
                         <option value="">Selecione uma sala</option>
                     </select>
  
@@ -115,5 +131,6 @@
         <button class="voltar" id="btnVoltar">Voltar</button>
 
     </body>
-    <script src="createReserva.js"></script>
+    <script src="configurarBotoes.js"></script>
+    <script src="requisicaoAPI.js"></script>
 </html>
